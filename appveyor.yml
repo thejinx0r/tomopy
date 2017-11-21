@@ -72,7 +72,7 @@ test_script:
   # rename tomopy  to make sure we run the tests on the
   # installed library.
   - rename tomopy tomopy2
-  # - nosetests test --with-coverage
+  - nosetests test --with-coverage
   - rename tomopy2 tomopy
 
 artifacts:
