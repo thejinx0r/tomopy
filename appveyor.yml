@@ -12,33 +12,11 @@ environment:
 
   matrix:
 
-    - MINICONDA: "C:\\Miniconda36-x64"
-      C_INCLUDE_PATH: "C:\\Miniconda36-x64\\Library\\include"
-      LD_LIBRARY_PTH: "C:\\Miniconda36-x64\\Library\\lib"
-      PYTHON_MAJOR: "3"
-      PYTHON_ARCH: "64"
-      MINGW_PATH: "C:\\mingw-w64\\x86_64-6.3.0-posix-seh-rt_v5-rev1\\mingw64"
-
-    - MINICONDA: "C:\\Miniconda35-x64"
-      C_INCLUDE_PATH: "C:\\Miniconda35-x64\\Library\\include"
-      LD_LIBRARY_PTH: "C:\\Miniconda35-x64\\Library\\lib"
-      PYTHON_MAJOR: "3"
-      PYTHON_ARCH: "64"
-      MINGW_PATH: "C:\\mingw-w64\\x86_64-6.3.0-posix-seh-rt_v5-rev1\\mingw64"
-
-    - MINICONDA: "C:\\Miniconda3-x64"
-      C_INCLUDE_PATH: "C:\\Miniconda3-x64\\Library\\include"
-      LD_LIBRARY_PTH: "C:\\Miniconda3-x64\\Library\\lib"
-      PYTHON_MAJOR: "3"
-      PYTHON_VERSION: "3.4.3"
-      PYTHON_ARCH: "64"
-      MINGW_PATH: "C:\\mingw-w64\\x86_64-6.3.0-posix-seh-rt_v5-rev1\\mingw64"
 
     - MINICONDA: "C:\\Miniconda-x64"
       C_INCLUDE_PATH: "C:\\Miniconda-x64\\Library\\include"
       LD_LIBRARY_PTH: "C:\\Miniconda-x64\\Library\\lib"
       PYTHON_MAJOR: "2"
-      PYTHON_VERSION: "2.7.13"
       PYTHON_ARCH: "64"
       MINGW_PATH: "C:\\mingw-w64\\x86_64-6.3.0-posix-seh-rt_v5-rev1\\mingw64"
 
@@ -94,7 +72,7 @@ test_script:
   # rename tomopy  to make sure we run the tests on the
   # installed library.
   - rename tomopy tomopy2
-  - nosetests test --with-coverage
+  # - nosetests test --with-coverage
   - rename tomopy2 tomopy
 
 artifacts:
